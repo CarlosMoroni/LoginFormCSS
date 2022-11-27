@@ -1,0 +1,206 @@
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --input-color: #868686;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    background-color: var(--background);
+    overflow-y: hidden;
+}
+
+header {
+    width: 100vw;
+    padding: 30px;
+    position: absolute;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container{
+    width: 1000px;
+    height: 947px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 570px;
+    height: 512px;
+    background-color: var(--form-background);
+    color: var(--text-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-title{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.form a {
+    color: var(--primary-color);
+}
+
+.form div h1 {
+    color: var(--text-title);
+}
+
+.input-style {
+    width: 335px;
+    height: 44px;
+    border-radius: 5px;
+    border: 2px solid var(--input-color);
+    background-color: var(--form-background);
+    padding: 0 35px;
+    color: var(--text-base);
+}
+
+.input-style:enabled{
+    border: 2px solid var(--primary-color);
+}
+
+.email {
+    position: relative;
+    width: 335px;
+    margin-bottom: 20px;
+}
+
+.email img {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+.senha {
+    position: relative;
+    width: 335px;
+    margin-bottom: 20px;
+}
+
+.senha #cadeado{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+
+.senha #olho{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox > a{
+    margin-left: 45px;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox input + label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid var(--input-color);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.checkbox input:checked + label::before {
+    background-image: url('/public/img/check.svg');
+    background-color: var(--primary-color);
+}
+
+form > button {
+    width: 335px;
+    height: 44px;
+    background-color: var(--primary-color);
+    color: var(--background);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.text{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.imagen {
+    height: 100vh;
+}
+
+.imagen > img {
+    width: 900px;
+}
+
+.imagen > img {
+    height: 100%;
+}
+
+@media (min-width: 2000px){
+    main {
+        max-width: 90%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 2100px){
+    main {
+        max-width: 1920px;
+    }
+}
+
+@media (max-width: 1500px){
+    .imagen { 
+        display: none;
+    }
+
+    main {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 580px){
+    .form {
+        width: 100vw;
+        height: 100vh;
+    }
+}
